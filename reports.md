@@ -151,13 +151,4 @@ The first-order model fits every single step well (RMSE ≤ 3.7°), but its para
 * **Encoder reset once.** This is handled in the analysis. The raw log is kept unchanged.
 * **Single run per level, in one sweep from −100 % to +100 %.** Battery sag during the sweep is
   confounded with PWM.
-## 6. Reproduce
 
-```bash
-pip install -r requirements.txt
-cd src
-python split_data.py          # motor_data/per_level/*.txt
-python identify.py            # results/step_fits.csv, wheel_models.json, tables.md
-python plots.py               # figures/*.png
-python build_report.py        # report.md from report_template.md + results/tables.md
-```
